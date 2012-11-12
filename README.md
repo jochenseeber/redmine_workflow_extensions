@@ -7,7 +7,7 @@ its life cycle.
 Features
 --------
 
-* Record close date of an issue and provider a filter for it
+* Record close date of an issue and provide a filter for it
 
 Installation and Setup
 ----------------------
@@ -26,4 +26,3 @@ Installation and Setup
     RAILS_ENV=production rake redmine:plugins:migrate
     
 * Restart Redmine
-    

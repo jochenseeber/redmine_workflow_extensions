@@ -18,11 +18,11 @@ Installation and Setup
 
 * Install the plugin
 
-    cd plugins
-    git clone https://github.com/jochenseeber/redmine_workflow_extensions.git
+        cd plugins
+        git clone https://github.com/jochenseeber/redmine_workflow_extensions.git
     
 * Run the database migration
 
-    RAILS_ENV=production rake redmine:plugins:migrate
+        RAILS_ENV=production rake redmine:plugins:migrate
     
 * Restart Redmine

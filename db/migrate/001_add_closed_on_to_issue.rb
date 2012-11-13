@@ -19,7 +19,7 @@ class AddClosedOnToIssue < ActiveRecord::Migration
         change_table :issues do |t|
             t.datetime :closed_on
         end
-        
+
         # Set close date on closed issues
         sql = <<-SQL
             update issues i
@@ -31,6 +31,13 @@ class AddClosedOnToIssue < ActiveRecord::Migration
                 and d.prop_key = 'status_id'
             )
             where s.is_closed
+        SQL
+        ActiveRecord::Base.connection.execute(sql)
+        sql = <<-SQL
+            update issues i
+            left join issue_statuses s on i.status_id = s.id
+            set i.closed_on = i.created_on
+            where s.is_closed and i.closed_on is null
         SQL
         ActiveRecord::Base.connection.execute(sql)
     end

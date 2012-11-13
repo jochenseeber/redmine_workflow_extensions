@@ -26,3 +26,10 @@ Installation and Setup
         RAILS_ENV=production rake redmine:plugins:migrate
     
 * Restart Redmine
+
+License
+-------
+
+This plugin is licensed under the [GNU Affero General Public License][agpl].
+
+[agpl]: http://www.gnu.org/licenses/agpl-3.0.html "GNU Affero General Public License"

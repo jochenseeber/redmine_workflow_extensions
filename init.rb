@@ -19,7 +19,7 @@ require 'redmine_workflow_extensions/query_patch.rb'
 require 'redmine_workflow_extensions/issue_listener.rb'
 
 Redmine::Plugin.register :redmine_workflow_extensions do
-    name 'Redmine Workflow Extensions plugin'
+    name 'Workflow Extensions plugin'
     author 'Jochen Seeber'
     description 'Plugin that records the issue close date and provides a filter for it'
     version '0.0.1'
